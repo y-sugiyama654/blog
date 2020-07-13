@@ -1,5 +1,10 @@
 <template>
   <div class="w-full my-3 py-2 bg-white overflow-hidden shadow-lg">
+    <nuxt-link :to=" '/category/' + work.fields.category.sys.id ">
+      <div class="absolute bg-white py-1 px-3 rounded shadow mt-1 ml-1 text-sm">
+        {{ work.fields.category.fields.name }}
+      </div>
+    </nuxt-link>
     <div
       class="mb-3 w-full h-64 bg-center bg-cover"
       :style=" 'background-image: url(' + work.fields.image.fields.file.url + ')' "
@@ -12,7 +17,8 @@
       <li
         v-for="tag in work.fields.tag"
         :key="tag.sys.id"
-        class="list-none text-xs m-1 bg-gray-200 p-1 rounded cursor-pointer">
+        class="list-none text-xs m-1 bg-gray-200 p-1 rounded cursor-pointer"
+        @click="$router.push('/tag/'+tag.sys.id)">
         {{ tag.fields.name }}
       </li>
     </div>
