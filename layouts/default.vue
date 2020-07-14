@@ -10,33 +10,30 @@
       </div>
       <div></div>
     </nav>
-    <main class="w-full mt-10">
-      <nuxt />
-    </main>
+    <div class="w-full bg-gray-200">
+      <div class="bg-white mx-16">
+        <div>
+          <p class="text-5xl text-center">ブログ一覧</p>
+        </div>
+        <div class="flex mb-4">
+          <div class="w-3/4 p-2 text-center">
+            <main class="w-64 mt-10"><nuxt /></main>
+          </div>
+          <div class="w-1/4 p-2 text-center">
+            <sidebar></sidebar>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
-  import { faTwitter } from '@fortawesome/free-brands-svg-icons'
-  import { faGithub } from '@fortawesome/free-brands-svg-icons'
-  import { faCode } from '@fortawesome/free-solid-svg-icons'
+  import sidebar from "../components/sidebar";
   export default {
-    data() {
-      return {
-        keyword: ''
-      }
+    components: {
+      sidebar,
     },
-    computed: {
-      faTwitter () {
-        return faTwitter
-      },
-      faGithub () {
-        return faGithub
-      },
-      faCode () {
-        return faCode
-      }
-    }
   }
 </script>
 
