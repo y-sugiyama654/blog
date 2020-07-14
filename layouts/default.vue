@@ -1,43 +1,15 @@
 <template>
-  <div class="font-main flex flex-wrap justify-around">
-    <header class="w-64 h-64">
-      <div class="w-64 mt-24 ml-2 relative md:fixed">
-        <div class="flex">
-          <div class="bg-center bg-cover w-16 h-16 mr-2 rounded-full shadow photo"></div>
-          <div>
-            <h1 class="font-bold">Yuta Sugiyama</h1>
-            <p class="text-xs text-justify">フロントエンドエンジニアのYuta Sugiyamaです。Vue.js, Nuxt.jsが大好きです。Pythonも使います。ご依頼はDMからどうぞ。</p>
-          </div>
-        </div>
-        <div class="flex justify-around mt-5 text-xs">
-          <nuxt-link to="/">
-            <button>
-              <fa-layers full-width class="fa-2x block mx-auto mb-1">
-                <fa :icon="faCode" />
-              </fa-layers>
-              Works
-            </button>
-          </nuxt-link>
-          <a href="http://" target="_blank" rel="noopener noreferrer">
-            <button>
-              <fa-layers full-width class="fa-2x block mx-auto mb-1">
-                <fa :icon="faTwitter" />
-              </fa-layers>
-              Twitter
-            </button>
-          </a>
-          <a href="https://github.com/si-zerodarkthirty" target="_blank" rel="noopener noreferrer">
-            <button>
-              <fa-layers full-width class="fa-2x block mx-auto mb-1">
-                <fa :icon="faGithub" />
-              </fa-layers>
-              GitHub
-            </button>
-          </a>
-        </div>
-        <input type="text" placeholder="Keywords" class="bg-gray-300 p-2 text-xs rounded w-full mt-5 focus:outline-none" v-model="keyword" @keypress.enter="$router.push('/search/' + keyword)">
+  <div>
+    <nav class="flex justify-between flex-wrap bg-teal-500 p-6">
+      <div class="flex items-center flex-shrink-0 text-white mr-6">
+        <svg class="fill-current h-8 w-8 mr-2" width="54" height="54" viewBox="0 0 54 54" xmlns="http://www.w3.org/2000/svg"><path d="M13.5 22.1c1.8-7.2 6.3-10.8 13.5-10.8 10.8 0 12.15 8.1 17.55 9.45 3.6.9 6.75-.45 9.45-4.05-1.8 7.2-6.3 10.8-13.5 10.8-10.8 0-12.15-8.1-17.55-9.45-3.6-.9-6.75.45-9.45 4.05zM0 38.3c1.8-7.2 6.3-10.8 13.5-10.8 10.8 0 12.15 8.1 17.55 9.45 3.6.9 6.75-.45 9.45-4.05-1.8 7.2-6.3 10.8-13.5 10.8-10.8 0-12.15-8.1-17.55-9.45-3.6-.9-6.75.45-9.45 4.05z"/></svg>
+        <span class="font-semibold text-xl tracking-tight">Tailwind CSS</span>
       </div>
-    </header>
+      <div>
+        <p href="#" class="inline-block text-xl px-4 py-2 leading-none font-black text-white mt-4 lg:mt-0">ペチパーSUGIYAMAの技術ブログ</p>
+      </div>
+      <div></div>
+    </nav>
     <main class="w-full mt-10">
       <nuxt />
     </main>
@@ -68,16 +40,3 @@
   }
 </script>
 
-<style>
-  main {
-    max-width: 550px;
-  }
-  .photo {
-    min-width: 4rem;
-    min-height: 4rem;
-    background-image: url('https://avatars3.githubusercontent.com/u/42257182?s=400&u=70f63f8b73ae0f711f45e7a8340e3424acc4fa98&v=4');
-  }
-  button:focus {
-    outline: none;
-  }
-</style>
