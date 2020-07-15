@@ -101,7 +101,7 @@
 
 <style>
   main {
-    max-width: 550px;
+    /*max-width: 550px;*/
   }
   .photo {
     min-width: 4rem;

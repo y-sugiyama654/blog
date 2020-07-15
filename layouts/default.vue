@@ -13,11 +13,11 @@
     <div class="w-full bg-gray-200">
       <div class="bg-white mx-16">
         <div>
-          <p class="text-5xl text-center">ブログ一覧</p>
+          <p class="text-5xl text-center pt-6">ブログ一覧</p>
         </div>
         <div class="flex mb-4">
           <div class="w-3/4 p-2 text-center">
-            <main class="w-64 mt-10"><nuxt /></main>
+            <main><nuxt /></main>
           </div>
           <div class="w-1/4 p-2 text-center">
             <sidebar></sidebar>
