@@ -19,8 +19,7 @@
             </nuxt-link>
           </div>
           <div>
-            <p class="text-gray-700 text-base">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.</p>
-            <!--<p class="text-gray-700 text-base" v-html="$md.render(work.fields.content)"></p>-->
+            <p class="text-gray-700 text-base" v-html="summary"></p>
           </div>
         </div>
       </div>
@@ -45,6 +44,12 @@
 
 <script>
   export default {
-    props: ['work']
+    props: ['work'],
+    data: function() {
+      return {
+        summary: this.work.fields.content.substr(0, 100)
+      }
+    }
   }
+
 </script>
