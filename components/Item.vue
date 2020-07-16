@@ -6,10 +6,11 @@
       </div>
     </nuxt-link>
     <div class="flex justify-between w-full">
-      <div
+      <nuxt-link
+        :to=" '/work/' + work.fields.slug "
         class="mb-3 w-1/3 h-40 bg-center bg-cover"
         :style=" 'background-image: url(' + work.fields.image.fields.file.url + ')' "
-      ></div>
+      ></nuxt-link>
 
       <div class="w-2/3 border-r border-b border-l border-gray-400 lg:border-l-0 lg:border-t lg:border-gray-400 bg-white rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col justify-between leading-normal">
         <div class="mb-8">
