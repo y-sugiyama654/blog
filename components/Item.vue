@@ -36,7 +36,7 @@
         </li>
       </div>
       <div class="mr-4">
-        <p class="text-sm mt-2 text-gray-700">2020年7月11日 更新</p>
+        <p class="text-sm mt-2 text-gray-700">{{ date }} 更新</p>
       </div>
     </div>
   </div>
@@ -47,7 +47,8 @@
     props: ['work'],
     data: function() {
       return {
-        summary: this.work.fields.content.substr(0, 100)
+        summary: this.work.fields.content.substr(0, 100),
+        date: this.work.fields.date.substr(0, 10)
       }
     }
   }
