@@ -5,13 +5,13 @@
         {{ work.fields.category.fields.name }}
       </div>
     </nuxt-link>
-    <div class="flex justify-between">
+    <div class="flex justify-between w-full">
       <div
-        class="mb-3 w-1/2 h-40 bg-center bg-cover"
+        class="mb-3 w-1/3 h-40 bg-center bg-cover"
         :style=" 'background-image: url(' + work.fields.image.fields.file.url + ')' "
       ></div>
 
-      <div class="border-r border-b border-l border-gray-400 lg:border-l-0 lg:border-t lg:border-gray-400 bg-white rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col justify-between leading-normal">
+      <div class="w-2/3 border-r border-b border-l border-gray-400 lg:border-l-0 lg:border-t lg:border-gray-400 bg-white rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col justify-between leading-normal">
         <div class="mb-8">
           <div class="my-2">
             <nuxt-link :to=" '/work/' + work.fields.slug ">
