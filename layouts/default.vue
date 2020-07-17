@@ -20,7 +20,7 @@
             <main><nuxt /></main>
           </div>
           <div class="w-1/4 p-2 text-center">
-            <sidebar></sidebar>
+            <Sidebar></Sidebar>
           </div>
         </div>
       </div>
@@ -29,10 +29,10 @@
 </template>
 
 <script>
-  import sidebar from "../components/sidebar";
+  import Sidebar from "../components/Sidebar";
   export default {
     components: {
-      sidebar,
+      Sidebar,
     },
   }
 </script>
